@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  ddb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ddb
+    ports:
+        - 8848:8848
+    volumes:
+      - ddb:/opt/ddb/server/local8848
+    restart: always
+
+volumes:
+  ddb:
